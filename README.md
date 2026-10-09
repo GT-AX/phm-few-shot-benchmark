@@ -22,7 +22,7 @@ Raw CWRU data are downloaded from the original host and remain outside Git. This
 Use **Python 3.10**. The reference runs used Python 3.10.11, PyTorch 2.5.1+cu124, NumPy 1.26.4 and SciPy 1.11.4 on Windows with an NVIDIA RTX A4000. See [reproducibility details](docs/reproducibility.md).
 
 ```bash
-git clone https://github.com/MainakMallick/phm-few-shot-benchmark.git
+git clone https://github.com/GT-AX/phm-few-shot-benchmark.git
 cd phm-few-shot-benchmark
 python -m venv .venv
 ```
