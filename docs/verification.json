@@ -1,0 +1,17 @@
+{
+  "status": "full_retraining_in_progress",
+  "official_downloads_sha256": "pass: all 10 files",
+  "preprocessed_arrays_match_original": true,
+  "target_episodes_match_original": true,
+  "local_unit_tests": {
+    "passed": 7
+  },
+  "reference_audit": {
+    "status": "pass",
+    "models": 24,
+    "result_rows": 24,
+    "hashed_files": 126
+  },
+  "checkpoint_evaluation_smoke": "ProtoNet 2D seed 17 passed",
+  "full_retraining": "Running all 24 models; final report will replace this status."
+}

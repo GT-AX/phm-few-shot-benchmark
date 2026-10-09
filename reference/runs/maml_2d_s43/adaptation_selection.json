@@ -1,0 +1,19 @@
+{
+  "source_only": true,
+  "choices": [
+    {
+      "lr": 0.01,
+      "source_val_acc": 0.9933333317438762
+    },
+    {
+      "lr": 0.05,
+      "source_val_acc": 0.9949999988079071
+    },
+    {
+      "lr": 0.1,
+      "source_val_acc": 0.5466666678587596
+    }
+  ],
+  "lr": 0.05,
+  "steps": 5
+}

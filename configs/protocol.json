@@ -1,0 +1,110 @@
+{
+  "name": "CWRU held-out fault-class benchmark, T2 class partition",
+  "data_root": "data/raw/cwru",
+  "source_classes": [
+    "IR007",
+    "IR014",
+    "IR021",
+    "OR007@6",
+    "OR014@6",
+    "OR021@6"
+  ],
+  "target_classes": [
+    "Normal",
+    "B007",
+    "B014",
+    "B021"
+  ],
+  "load_hp": 0,
+  "channel": "DE_time",
+  "sample_rate_hz": 12000,
+  "healthy_native_rate_hz": 48000,
+  "healthy_resampling": "scipy.signal.resample_poly(up=1, down=4) before windowing",
+  "window_samples": 1024,
+  "stride_samples": 1024,
+  "source_train_fraction": [
+    0.0,
+    0.6
+  ],
+  "source_validation_fraction": [
+    0.65,
+    1.0
+  ],
+  "target_support_fraction": [
+    0.0,
+    0.3
+  ],
+  "target_query_fraction": [
+    0.4,
+    1.0
+  ],
+  "normalization": "subtract each window mean; divide by each window standard deviation, floor 1e-6; no dataset-level fitting",
+  "representations": {
+    "1d": [
+      1,
+      1024
+    ],
+    "2d": [
+      1,
+      32,
+      32
+    ]
+  },
+  "image_conversion": "Lossless row-major reshape of the same normalized 1024 samples into 32x32; not STFT or scalogram",
+  "algorithms": [
+    "maml",
+    "reptile",
+    "protonet",
+    "relationnet"
+  ],
+  "backbone": "4 blocks: Conv(64,k=3,pad=1), GroupNorm(8,64), ReLU, MaxPool(2); adaptive pooling to 256 features; 1D/2D operation variants",
+  "maml": "Full second-order MAML, 4-class linear head, 3 SGD inner steps at 0.05 during meta-training, Adam outer lr=0.001",
+  "reptile": "5 Adam source-support minibatch steps at 0.001 (betas 0,0.999), batch size 10; interpolate initialization, epsilon 1.0 to 0.1; target Adam uses all support",
+  "protonet": "Class-mean support embeddings; negative mean squared Euclidean distance; cross-entropy episodic training",
+  "relationnet": "Class-mean support feature map concatenated with query map; two 64-channel Conv/GN/ReLU/pool blocks; global average pooling; FC64-8-1 with LeakyReLU(0.1); cross-entropy across four relation logits",
+  "train_seeds": [
+    17,
+    29,
+    43
+  ],
+  "train_episodes": 1200,
+  "train_way": 4,
+  "train_shot": 5,
+  "train_query_per_class": 5,
+  "validation_interval": 200,
+  "validation_episodes": 20,
+  "checkpoint_selection": "highest source-validation 4-way 5-shot accuracy; target not used",
+  "adaptation_lr_candidates": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "adaptation_steps": 5,
+  "adaptation_selection": "mean source-validation accuracy across 1,5,10 shots, 10 shared episodes per shot",
+  "test_way": 4,
+  "test_shots": [
+    1,
+    5,
+    10
+  ],
+  "test_query_per_class": 15,
+  "test_episodes": 200,
+  "test_episode_seed": 20261008,
+  "paired_evaluation": "same episode class order, same query indices, and nested first-K support indices for every model/backbone/seed/shot",
+  "aggregation": "mean episode accuracy within each training seed; report mean and sample SD across 3 independent training seeds",
+  "limitations": "Same recording provides temporally separated support and query pools within each target class; this is not independent-bearing generalization. New implementation/protocol, not a reproduction of MetaFD numbers. Algorithm training budgets differ in gradient work although source tasks and 1200 episodes are shared.",
+  "sources": [
+    "https://github.com/fyancy/MetaFD",
+    "https://engineering.case.edu/bearingdatacenter/download-data-file",
+    "https://papers.phmsociety.org/index.php/phme/article/download/3329/1947",
+    "https://proceedings.mlr.press/v70/finn17a.html",
+    "https://arxiv.org/abs/1803.02999",
+    "https://papers.nips.cc/paper_files/paper/2017/hash/cb8da6767461f2812ae4290eac7cbc42-Abstract.html"
+  ],
+  "reptile_adaptation_lr_candidates": [
+    0.0005,
+    0.001,
+    0.005
+  ],
+  "source_validation_revision": "Initial SGD Reptile was weak on source validation; initial RelationNet MLP/MSE collapsed at source chance. Before target evaluation of this revision, switch Reptile to Adam minibatches and RelationNet to a convolutional relation head with cross-entropy. MAML and ProtoNet retain their unchanged original runs."
+}

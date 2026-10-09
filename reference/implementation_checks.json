@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "rep": "1d",
+      "maml_adapts": true,
+      "full_meta_gradient_finite": true,
+      "base_weights_unchanged": true,
+      "functional_matches_sgd": true,
+      "protonet_class_permutation": true,
+      "functional_adam_matches_torch": true,
+      "relation_encoder_and_head_gradients": true,
+      "relation_class_permutation": true
+    },
+    {
+      "rep": "2d",
+      "maml_adapts": true,
+      "full_meta_gradient_finite": true,
+      "base_weights_unchanged": true,
+      "functional_matches_sgd": true,
+      "protonet_class_permutation": true,
+      "functional_adam_matches_torch": true,
+      "relation_encoder_and_head_gradients": true,
+      "relation_class_permutation": true
+    }
+  ],
+  "nested_support_sizes": [
+    1,
+    5,
+    10
+  ],
+  "disjoint_source_target_classes": true,
+  "temporal_separation_verified": true
+}

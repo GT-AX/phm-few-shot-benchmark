@@ -1,0 +1,72 @@
+[
+  {
+    "class": "IR007",
+    "path": "12k Drive End Bearing Fault Data/IR007_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/105.mat",
+    "sha256": "f80b0ea04fd06b372a0eaec7c056543ea37e4bb4727a5b173d2a5bacd2aa9cab",
+    "bytes": 2910768
+  },
+  {
+    "class": "IR014",
+    "path": "12k Drive End Bearing Fault Data/IR014_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/169.mat",
+    "sha256": "f5448673725c4ea2735fe7d3fe4b16ad82b217eac6b62c4bf351c4549b0a5229",
+    "bytes": 2924712
+  },
+  {
+    "class": "IR021",
+    "path": "12k Drive End Bearing Fault Data/IR021_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/209.mat",
+    "sha256": "9f723d6d9d2eba714c6dc50f99321dffa73d8b1e4d3605675b2c2251511eff80",
+    "bytes": 2931672
+  },
+  {
+    "class": "OR007@6",
+    "path": "12k Drive End Bearing Fault Data/OR007@6_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/130.mat",
+    "sha256": "35a095307d0971477049b343a1b5981dde465a58fb7f233ad89b035068c1717d",
+    "bytes": 2928192
+  },
+  {
+    "class": "OR014@6",
+    "path": "12k Drive End Bearing Fault Data/OR014@6_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/197.mat",
+    "sha256": "fa571b47cd942f9514a920b403fb7c053cd442bb2963a360a96d0f61432f03e9",
+    "bytes": 2924712
+  },
+  {
+    "class": "OR021@6",
+    "path": "12k Drive End Bearing Fault Data/OR021@6_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/234.mat",
+    "sha256": "ebcbdb96612e8085bbdbf81f0e5e8e8a8d1a693d1ec559c4894f7792771aa9b2",
+    "bytes": 2938632
+  },
+  {
+    "class": "Normal",
+    "path": "Normal Data/Normal_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/97.mat",
+    "sha256": "16bf48babcf1c7ac224bc1a81cd9eafdb27e42d5cf559761907e067e8eeadf3c",
+    "bytes": 3903344
+  },
+  {
+    "class": "B007",
+    "path": "12k Drive End Bearing Fault Data/B007_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/118.mat",
+    "sha256": "b00628f8dd8d1d930af77fa465d1e5cdb385fe259489053f91f3680bda7f640e",
+    "bytes": 2942112
+  },
+  {
+    "class": "B014",
+    "path": "12k Drive End Bearing Fault Data/B014_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/185.mat",
+    "sha256": "5bea2c60f177215ba3ec4ae287faf745d7e14aed1a12efe9e37b27c27044bafc",
+    "bytes": 2924712
+  },
+  {
+    "class": "B021",
+    "path": "12k Drive End Bearing Fault Data/B021_0.mat",
+    "url": "https://engineering.case.edu/sites/default/files/222.mat",
+    "sha256": "fcc0ee740fa123b1f4683f555458891719efb2857afd9fdee63e8fde0ed14469",
+    "bytes": 2928192
+  }
+]

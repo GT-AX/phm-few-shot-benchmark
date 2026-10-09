@@ -1,0 +1,38 @@
+[
+  {
+    "step": 200,
+    "source_val_acc": 0.9675000071525574,
+    "loss": 0.2831995487213135,
+    "elapsed_s": 1.52
+  },
+  {
+    "step": 400,
+    "source_val_acc": 0.9675000071525574,
+    "loss": 0.16391046345233917,
+    "elapsed_s": 3.14
+  },
+  {
+    "step": 600,
+    "source_val_acc": 1.0,
+    "loss": 0.10348918288946152,
+    "elapsed_s": 4.81
+  },
+  {
+    "step": 800,
+    "source_val_acc": 0.9875,
+    "loss": 0.2327553778886795,
+    "elapsed_s": 6.51
+  },
+  {
+    "step": 1000,
+    "source_val_acc": 1.0,
+    "loss": 0.018461646512150764,
+    "elapsed_s": 8.14
+  },
+  {
+    "step": 1200,
+    "source_val_acc": 1.0,
+    "loss": 0.012365582399070263,
+    "elapsed_s": 9.71
+  }
+]

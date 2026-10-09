@@ -1,0 +1,21 @@
+{
+  "description": "Preserved final lecture benchmark, packaged portably. No raw CWRU data are distributed.",
+  "original_frozen_hashes": {
+    "protocol_sha256": "6288c18e5e726b7a7626ede4c59ead347413bcf10beb0650d8a406183ee57dd7",
+    "code_sha256": "faca89fbe7f8010f202b015fe9d77df8851bca732b08c1f0487b88002bdf8d5a",
+    "episode_sha256": "4e2db2a272a5e786b1817636573dd2ba73538f74ab76bc1f16ac8b8633e3c4b6",
+    "created": 1791505372.2928035
+  },
+  "source_changes": "Only portability, metadata, data integrity, checkpoint evaluation and command-line handling are added. Model, training, adaptation, preprocessing and sampling operations are retained.",
+  "retained_runs": "MAML and ProtoNet original runs were unchanged in revision v2. Reptile and RelationNet were revised using source validation before final v2 target evaluation. Smoke-test seed 999 is excluded.",
+  "environment": {
+    "python": "3.10.11",
+    "torch": "2.5.1+cu124",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "device": "NVIDIA RTX A4000",
+    "os": "Windows"
+  }
+}
