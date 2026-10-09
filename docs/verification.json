@@ -1,10 +1,17 @@
 {
-  "status": "full_retraining_in_progress",
-  "official_downloads_sha256": "pass: all 10 files",
+  "status": "pass",
+  "official_downloads_sha256": "pass: all 10 original files downloaded and verified",
   "preprocessed_arrays_match_original": true,
   "target_episodes_match_original": true,
   "local_unit_tests": {
     "passed": 7
+  },
+  "fresh_github_clone_tests": {
+    "passed": 7
+  },
+  "github_ci": {
+    "conclusion": "success",
+    "url": "https://github.com/MainakMallick/phm-few-shot-benchmark/actions/runs/37868974496"
   },
   "reference_audit": {
     "status": "pass",
@@ -12,6 +19,149 @@
     "result_rows": 24,
     "hashed_files": 126
   },
-  "checkpoint_evaluation_smoke": "ProtoNet 2D seed 17 passed",
-  "full_retraining": "Running all 24 models; final report will replace this status."
+  "checkpoint_evaluation_smoke": "ProtoNet 2D seed 17, all shot predictions reproduced",
+  "full_retraining": {
+    "models": 24,
+    "training_episodes_per_model": 1200,
+    "identical_target_predictions": 864000,
+    "all_result_rows_exact": true,
+    "checkpoint_tensors": [
+      {
+        "run": "maml_1d_s17",
+        "checkpoint_step": 800,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "maml_1d_s29",
+        "checkpoint_step": 400,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "maml_1d_s43",
+        "checkpoint_step": 600,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "maml_2d_s17",
+        "checkpoint_step": 800,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "maml_2d_s29",
+        "checkpoint_step": 1000,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "maml_2d_s43",
+        "checkpoint_step": 1000,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "protonet_1d_s17",
+        "checkpoint_step": 600,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "protonet_1d_s29",
+        "checkpoint_step": 600,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "protonet_1d_s43",
+        "checkpoint_step": 600,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "protonet_2d_s17",
+        "checkpoint_step": 400,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "protonet_2d_s29",
+        "checkpoint_step": 400,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "protonet_2d_s43",
+        "checkpoint_step": 600,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "relationnet_1d_s17",
+        "checkpoint_step": 400,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "relationnet_1d_s29",
+        "checkpoint_step": 400,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "relationnet_1d_s43",
+        "checkpoint_step": 600,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "relationnet_2d_s17",
+        "checkpoint_step": 1000,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "relationnet_2d_s29",
+        "checkpoint_step": 1000,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "relationnet_2d_s43",
+        "checkpoint_step": 1000,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "reptile_1d_s17",
+        "checkpoint_step": 1200,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "reptile_1d_s29",
+        "checkpoint_step": 1200,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "reptile_1d_s43",
+        "checkpoint_step": 1200,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "reptile_2d_s17",
+        "checkpoint_step": 1200,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "reptile_2d_s29",
+        "checkpoint_step": 1000,
+        "all_tensors_identical": true
+      },
+      {
+        "run": "reptile_2d_s43",
+        "checkpoint_step": 1200,
+        "all_tensors_identical": true
+      }
+    ]
+  },
+  "one_command_resume_aggregate_audit_report": "pass",
+  "environment": {
+    "python": "3.10.11",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.5.1+cu124",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "cuda": "12.4",
+    "cudnn": 90100,
+    "device": "cuda:0",
+    "gpu": "NVIDIA RTX A4000",
+    "code_sha256": "751ef0801758ca45387c01006b7bdd7e0c08a0eb22fc2a5c2bd67966433e9164",
+    "cudnn_deterministic": true,
+    "tf32": false
+  },
+  "hardware_scope": "Exact reproduction verified on the recorded Windows/PyTorch/CUDA/RTX A4000 environment. Other platforms may differ numerically."
 }

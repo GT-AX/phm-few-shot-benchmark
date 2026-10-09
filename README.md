@@ -15,6 +15,8 @@ This repository contains the code and measured results used in the PHM lecture's
 
 Raw CWRU data are downloaded from the original host and remain outside Git. This repository covers the benchmark and its result plots; it does not require the slide authoring software.
 
+**Verified:** a fresh download and retraining of all 24 models reproduced every selected checkpoint tensor, all 864,000 query predictions and every aggregate result exactly in the recorded environment. A fresh GitHub clone and the clean Linux CI tests also pass. See [verification evidence](docs/verification.json).
+
 ## Install
 
 Use **Python 3.10**. The reference runs used Python 3.10.11, PyTorch 2.5.1+cu124, NumPy 1.26.4 and SciPy 1.11.4 on Windows with an NVIDIA RTX A4000. See [reproducibility details](docs/reproducibility.md).
@@ -115,6 +117,8 @@ MAML/Reptile/ProtoNet use 256-dimensional pooled embeddings. MAML/Reptile add a 
 ## Results
 
 The complete table is in [docs/results.md](docs/results.md), with full-precision values in [reference/results.json](reference/results.json). The slide tables and charts round values to two decimals. The optional plots also show sample SD across training seeds.
+
+Plots: [MAML](docs/maml.png), [Reptile](docs/reptile.png), [ProtoNet](docs/protonet.png), [RelationNet](docs/relationnet.png).
 
 ## Interpretation and limits
 
